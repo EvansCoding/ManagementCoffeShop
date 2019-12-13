@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97B029F0-89D3-4015-B6FB-DC63A13DA8F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManagementCoffeShop</RootNamespace>
+    <AssemblyName>ManagementCoffeShop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1" />
+    <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.XtraBars.v19.1" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v19.1" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\myControls.cs" />
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fORDER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fORDER.Designer.cs">
+      <DependentUpon>fORDER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserController\uc_AreaNormal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_AreaNormal.Designer.cs">
+      <DependentUpon>uc_AreaNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_AreaVIP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_AreaVIP.Designer.cs">
+      <DependentUpon>uc_AreaVIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_Dish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_Dish.Designer.cs">
+      <DependentUpon>uc_Dish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_KindProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_KindProduct.Designer.cs">
+      <DependentUpon>uc_KindProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_PanelOrderProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_PanelOrderProducts.Designer.cs">
+      <DependentUpon>uc_PanelOrderProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_Product.Designer.cs">
+      <DependentUpon>uc_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_PanelTables.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_PanelTables.Designer.cs">
+      <DependentUpon>uc_PanelTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_Table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_Table.Designer.cs">
+      <DependentUpon>uc_Table.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fORDER.resx">
+      <DependentUpon>fORDER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserController\uc_AreaNormal.resx">
+      <DependentUpon>uc_AreaNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_AreaVIP.resx">
+      <DependentUpon>uc_AreaVIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_Dish.resx">
+      <DependentUpon>uc_Dish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_KindProduct.resx">
+      <DependentUpon>uc_KindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_PanelOrderProducts.resx">
+      <DependentUpon>uc_PanelOrderProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_Product.resx">
+      <DependentUpon>uc_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_PanelTables.resx">
+      <DependentUpon>uc_PanelTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_Table.resx">
+      <DependentUpon>uc_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_sign.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_sign1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_calculator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_sign_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_group_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_group_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_print_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_tableware_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_male_circle_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_male_circle_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_logout_rounded_left_filled_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_health_sources_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_health_sources_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_tableware1_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cafe_filled_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_male_circle1_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_male_circle1_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_stutdown_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_stutdown_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checkmark_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_property_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_restaurant_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManagementCoffeShop.Core\ManagementCoffeShop.Core.csproj">
+      <Project>{a023e1a5-1f5b-4477-8343-5aa403dc4c02}</Project>
+      <Name>ManagementCoffeShop.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

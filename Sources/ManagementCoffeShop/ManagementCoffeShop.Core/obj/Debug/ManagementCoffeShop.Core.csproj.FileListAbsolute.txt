@@ -1,0 +1,14 @@
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\bin\Debug\ManagementCoffeShop.Core.dll.config
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\bin\Debug\ManagementCoffeShop.Core.dll
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\bin\Debug\ManagementCoffeShop.Core.pdb
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\bin\Debug\EntityFramework.dll
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\bin\Debug\EntityFramework.xml
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\obj\Debug\ManagementCoffeShop.Core.csprojAssemblyReference.cache
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\obj\Debug\ManagementCoffeShop.Core.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\obj\Debug\ManagementCoffeShop.Core.csproj.CopyComplete
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\obj\Debug\ManagementCoffeShop.Core.dll
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\obj\Debug\ManagementCoffeShop.Core.pdb
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\obj\Debug\ManagementCoffeShop.Core.Migrations.initialize.resources
+C:\Users\nguye\Desktop\Management Coffe Shop\Sources\ManagementCoffeShop\ManagementCoffeShop.Core\obj\Debug\ManagementCoffeShop.Core.csproj.GenerateResource.cache
