@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +72,12 @@
     </Compile>
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMessageOrderNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMessageOrderNumber.Designer.cs">
+      <DependentUpon>FMessageOrderNumber.cs</DependentUpon>
     </Compile>
     <Compile Include="fORDER.cs">
       <SubType>Form</SubType>
@@ -136,6 +143,9 @@
     </Compile>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMessageOrderNumber.resx">
+      <DependentUpon>FMessageOrderNumber.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fORDER.resx">
       <DependentUpon>fORDER.cs</DependentUpon>
@@ -279,6 +289,12 @@
       <Project>{a023e1a5-1f5b-4477-8343-5aa403dc4c02}</Project>
       <Name>ManagementCoffeShop.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checkmark1_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_96px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

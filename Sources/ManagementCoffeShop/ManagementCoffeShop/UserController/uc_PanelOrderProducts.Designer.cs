@@ -33,12 +33,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tbSEACHPRODUCT = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.label1 = new System.Windows.Forms.Label();
             this.flpKindProducts = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnFinish = new System.Windows.Forms.Button();
+            this.lbLoaiSanPham = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
@@ -102,6 +102,19 @@
             this.panel5.Size = new System.Drawing.Size(712, 64);
             this.panel5.TabIndex = 2;
             // 
+            // btnFinish
+            // 
+            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(184)))));
+            this.btnFinish.FlatAppearance.BorderSize = 0;
+            this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinish.Image = global::ManagementCoffeShop.Properties.Resources.icons8_checkmark_32;
+            this.btnFinish.Location = new System.Drawing.Point(635, 13);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(75, 36);
+            this.btnFinish.TabIndex = 12;
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
             // comboBoxEdit1
             // 
             this.comboBoxEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -132,25 +145,12 @@
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.flpKindProducts);
-            this.panelControl2.Controls.Add(this.label1);
+            this.panelControl2.Controls.Add(this.lbLoaiSanPham);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(194, 736);
             this.panelControl2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(184)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 49);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LOẠI SẢN PHẨM";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flpKindProducts
             // 
@@ -162,18 +162,19 @@
             this.flpKindProducts.Size = new System.Drawing.Size(190, 683);
             this.flpKindProducts.TabIndex = 1;
             // 
-            // btnFinish
+            // lbLoaiSanPham
             // 
-            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(184)))));
-            this.btnFinish.FlatAppearance.BorderSize = 0;
-            this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinish.Image = global::ManagementCoffeShop.Properties.Resources.icons8_checkmark_32;
-            this.btnFinish.Location = new System.Drawing.Point(635, 13);
-            this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(75, 36);
-            this.btnFinish.TabIndex = 12;
-            this.btnFinish.UseVisualStyleBackColor = false;
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            this.lbLoaiSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(184)))));
+            this.lbLoaiSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbLoaiSanPham.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoaiSanPham.ForeColor = System.Drawing.Color.White;
+            this.lbLoaiSanPham.Location = new System.Drawing.Point(2, 2);
+            this.lbLoaiSanPham.Name = "lbLoaiSanPham";
+            this.lbLoaiSanPham.Size = new System.Drawing.Size(190, 49);
+            this.lbLoaiSanPham.TabIndex = 0;
+            this.lbLoaiSanPham.Text = "LOẠI SẢN PHẨM";
+            this.lbLoaiSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbLoaiSanPham.Click += new System.EventHandler(this.lbLoaiSanPham_Click);
             // 
             // uc_PanelOrderProducts
             // 
@@ -208,6 +209,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.Button btnFinish;
         private System.Windows.Forms.FlowLayoutPanel flpKindProducts;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbLoaiSanPham;
     }
 }

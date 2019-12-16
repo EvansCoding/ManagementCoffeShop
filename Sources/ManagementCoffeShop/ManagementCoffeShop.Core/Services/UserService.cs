@@ -1,15 +1,13 @@
-﻿using ManagementCoffeShop.Core.Interfaces;
-using ManagementCoffeShop.Core.Models;
-using ManagementCoffeShop.Core.Models.Entities;
-using ManagementCoffeShop.Core.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ManagementCoffeShop.Core.Services
+﻿namespace ManagementCoffeShop.Core.Services
 {
+    using Interfaces;
+    using Models.Entities;
+    using Models.Enum;
+    using Utilities;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using System.Data.Entity;
+
     public class UserService : IUserService
     {
 
@@ -51,7 +49,10 @@ namespace ManagementCoffeShop.Core.Services
             return user;
         }
 
-
+        public Employe GetUser(Employe employe)
+        {
+            return _context.Employes.AsNoTracking().Where(x => x.Id == employe.Id).Include(x => x.Offices).SingleOrDefault();
+        }
         /// <inheritdoc />
         public void RefreshContext(ICoffeShopContext context)
         {
@@ -59,9 +60,9 @@ namespace ManagementCoffeShop.Core.Services
         }
 
         /// <inheritdoc />
-        public async Task<int> SaveChanges()
-        {
-            return await _context.SaveChangesAsync();
-        }
+        //public async Task<int> SaveChanges()
+        //{
+        //    return await _context.SaveChangesAsync();
+        //}
     }
 }

@@ -42,7 +42,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,33 +55,66 @@
   <ItemGroup>
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Data\Context\CoffeShopContext.cs" />
+    <Compile Include="Data\Mapping\AreaMapping.cs" />
+    <Compile Include="Data\Mapping\BillSellMapping.cs" />
+    <Compile Include="Data\Mapping\CustomerMapping.cs" />
+    <Compile Include="Data\Mapping\DetailBillSellMapping.cs" />
     <Compile Include="Data\Mapping\EmployeMapping.cs" />
     <Compile Include="Data\Mapping\OfficeMapping.cs" />
+    <Compile Include="Data\Mapping\ProductMapping.cs" />
+    <Compile Include="Data\Mapping\ProductTypeMapping.cs" />
+    <Compile Include="Data\Mapping\RawMaterialMapping.cs" />
+    <Compile Include="Data\Mapping\SupplierMapping.cs" />
+    <Compile Include="Data\Mapping\TablesMapping.cs" />
+    <Compile Include="Data\Mapping\UnitMapping.cs" />
+    <Compile Include="Interfaces\IAreaService.cs" />
     <Compile Include="Interfaces\IBaseEntity.cs" />
+    <Compile Include="Interfaces\IBillSellService.cs" />
     <Compile Include="Interfaces\ICoffeShopContext.cs" />
     <Compile Include="Interfaces\IContextService.cs" />
+    <Compile Include="Interfaces\ICustomerService.cs" />
+    <Compile Include="Interfaces\IDetailBillSell.cs" />
+    <Compile Include="Interfaces\IProductService.cs" />
+    <Compile Include="Interfaces\IProductTypeService.cs" />
+    <Compile Include="Interfaces\ITableService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
-    <Compile Include="Migrations\201912131853310_initialize.cs" />
-    <Compile Include="Migrations\201912131853310_initialize.designer.cs">
-      <DependentUpon>201912131853310_initialize.cs</DependentUpon>
+    <Compile Include="Migrations\201912161544190_Initialize.cs" />
+    <Compile Include="Migrations\201912161544190_Initialize.designer.cs">
+      <DependentUpon>201912161544190_Initialize.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Entities\Area.cs" />
+    <Compile Include="Models\Entities\BillSell.cs" />
+    <Compile Include="Models\Entities\Customer.cs" />
+    <Compile Include="Models\Entities\DetailBillSell.cs" />
     <Compile Include="Models\Entities\Employe.cs" />
     <Compile Include="Models\Entities\Office.cs" />
-    <Compile Include="Models\LoginAttemptStatus.cs" />
+    <Compile Include="Models\Entities\Product.cs" />
+    <Compile Include="Models\Entities\ProductType.cs" />
+    <Compile Include="Models\Entities\RawMaterial.cs" />
+    <Compile Include="Models\Entities\Supplier.cs" />
+    <Compile Include="Models\Entities\Tables.cs" />
+    <Compile Include="Models\Entities\Unit.cs" />
+    <Compile Include="Models\Enum\LoginAttemptStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AreaService.cs" />
+    <Compile Include="Services\BillSellService.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\DetailBillSellService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\ProductTypeService.cs" />
+    <Compile Include="Services\TableService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Utilities\GuidComb.cs" />
     <Compile Include="Utilities\GenerateHash.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912131853310_initialize.resx">
-      <DependentUpon>201912131853310_initialize.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912161544190_Initialize.resx">
+      <DependentUpon>201912161544190_Initialize.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

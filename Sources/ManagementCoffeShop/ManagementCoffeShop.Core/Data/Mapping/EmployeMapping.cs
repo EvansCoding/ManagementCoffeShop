@@ -24,7 +24,7 @@
 
             HasRequired(x => x.Offices)
                 .WithMany(t => t.User)
-                .Map(x => x.MapKey("Employe_Id"))
+                .Map(x => x.MapKey("Office_Id"))
                 .WillCascadeOnDelete(false);
         }
     }

@@ -30,5 +30,6 @@
         public DateTime updateDate { get; set; }
 
         public virtual Office Offices { get; set; }
+        public virtual IList<BillSell> BillSells { get; set; }
     }
 }

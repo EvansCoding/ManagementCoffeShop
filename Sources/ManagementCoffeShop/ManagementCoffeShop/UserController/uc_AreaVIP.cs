@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using static ManagementCoffeShop.fORDER;
+﻿using ManagementCoffeShop.Core.Constants;
+using ManagementCoffeShop.Core.Data.Context;
+using ManagementCoffeShop.Core.Models.Entities;
+using ManagementCoffeShop.Core.Services;
+using System;
 
 namespace ManagementCoffeShop.UserController
 {
@@ -35,21 +29,28 @@ namespace ManagementCoffeShop.UserController
 
         public void preLoad()
         {
+            TableService tableService = new TableService(new CoffeShopContext());
+            AreaService areaService = new AreaService(new CoffeShopContext());
+            var area = areaService.GetArea(Constants.areaVIP);
+
             while (flpAreaVIP.Controls.Count > 0) flpAreaVIP.Controls.RemoveAt(0);
 
-            for (int i = 0; i < 100; i++)
+            int i = 0;
+            foreach (var item in tableService.GetTables(area))
             {
-                showClient(i);
+                item.Area = area;
+                showClient(item, ++i);
             }
         }
 
-        public void showClient(int i)
+        public void showClient(Tables table, int i)
         {
-            uc_Table uS_ShortInfo = new uc_Table(i );
-            flpAreaVIP.BeginInvoke((Action)(() =>
-            {
+            var employe = fORDER.Instance.GetEmploye();
+            uc_Table uS_ShortInfo = new uc_Table(employe, table, i);
+            //flpAreaVIP.BeginInvoke((Action)(() =>
+        //    {
                 flpAreaVIP.Controls.Add(uS_ShortInfo);
-            }));
+          //  }));
         }
 
         private void uc_AreaVIP_Load(object sender, EventArgs e)

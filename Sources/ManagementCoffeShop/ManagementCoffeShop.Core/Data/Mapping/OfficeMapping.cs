@@ -11,7 +11,6 @@
             Property(x => x.Id).IsRequired();
             Property(x => x.createdDay).IsRequired();
             Property(x => x.updatedDay).IsRequired();
-
         }
     }
 }

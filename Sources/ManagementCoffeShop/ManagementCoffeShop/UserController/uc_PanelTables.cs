@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace ManagementCoffeShop.UserController
 {
@@ -50,8 +43,6 @@ namespace ManagementCoffeShop.UserController
             btnAreaVIP.BackColor = Color.FromArgb(10, 113, 184);
             btnAreaVIP.ForeColor = Color.White;
             addControlsPanel(uc_AreaNormal.Instance);
-            addControlsPanel(uc_AreaVIP.Instance);
-
         }
         private void btnAreaNormal_Click(object sender, EventArgs e)
         {

@@ -1,4 +1,4 @@
-﻿namespace ManagementCoffeShop.Core.Models
+﻿namespace ManagementCoffeShop.Core.Models.Enum
 {
     public enum LoginAttemptStatus
     {

@@ -24,7 +24,7 @@
             controlFirst.Dock = DockStyle.Fill;
             controlSecond.Controls.Clear();
             controlSecond.Controls.Add(controlFirst);
-            controlFirst.BringToFront();
+            //controlFirst.BringToFront();
         }
 
     }

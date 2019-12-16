@@ -3,7 +3,6 @@
     using System.Security.Cryptography;
     using System.Text;
 
-
     public class GenerateHash
     {
         private static GenerateHash instance;

@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using ManagementCoffeShop.Core;
-using ManagementCoffeShop.Core.Services;
-using ManagementCoffeShop.Core.Data.Context;
-
-namespace ManagementCoffeShop
+﻿namespace ManagementCoffeShop
 {
+    using System;
+    using System.Windows.Forms;
+    using Core.Services;
+    using Core.Data.Context;
+
     public partial class fLogin : DevExpress.XtraEditors.XtraForm
     {
         public fLogin()
@@ -27,11 +18,13 @@ namespace ManagementCoffeShop
             if(userService.ValidateUser(teLogin.Text, tePassword.Text))
             {
                 this.Hide();
-                fORDER.Instance.Show();
+                var user = userService.GetUser(teLogin.Text);
+                fORDER fORDER = new fORDER(user);
+                fORDER.Show();
             }
             else
             {
-                MessageBox.Show("Đăng Nhập Không Thành Công");
+                MessageBox.Show("Đăng Nhập Không Thành Công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

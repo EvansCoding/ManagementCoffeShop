@@ -63,6 +63,16 @@ namespace ManagementCoffeShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkmark_96px {
+            get {
+                object obj = ResourceManager.GetObject("checkmark_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cafe_filled_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8_cafe_filled_16", resourceCulture);
@@ -86,6 +96,16 @@ namespace ManagementCoffeShop.Properties {
         internal static System.Drawing.Bitmap icons8_checkmark_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_checkmark_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_checkmark1_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_checkmark1_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

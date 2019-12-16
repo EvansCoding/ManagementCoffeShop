@@ -9,6 +9,6 @@ namespace ManagementCoffeShop.Core.Interfaces
     public interface IContextService
     {
         void RefreshContext(ICoffeShopContext context);
-        Task<int> SaveChanges();
+        //Task<int> SaveChanges();
     }
 }

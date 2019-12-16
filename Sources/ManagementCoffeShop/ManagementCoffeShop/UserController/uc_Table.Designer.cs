@@ -84,6 +84,7 @@
             this.deleteTable.Name = "deleteTable";
             this.deleteTable.Size = new System.Drawing.Size(180, 22);
             this.deleteTable.Text = "Hủy Bàn";
+            this.deleteTable.Click += new System.EventHandler(this.deleteTable_Click);
             // 
             // uc_Table
             // 
