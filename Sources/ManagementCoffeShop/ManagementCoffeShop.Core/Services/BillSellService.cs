@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Data.Entity;
+using System.Data;
 
 namespace ManagementCoffeShop.Core.Services
 {
@@ -65,6 +66,30 @@ namespace ManagementCoffeShop.Core.Services
             return false;
         }
 
+        public DataTable GetAllBill()
+        {
+            var list =  _context.BillSells.Include(x => x.Employe).Select(x => x).ToList();
+            DataTable dataTable = new DataTable();
+            dataTable.Clear();
+            dataTable.Columns.Add("Id", typeof(string));
+            dataTable.Columns.Add("createDate", typeof(string));
+            dataTable.Columns.Add("totalMoney", typeof(string));
+            dataTable.Columns.Add("status", typeof(bool));
+            dataTable.Columns.Add("fullName", typeof(string));
+            DataRow row;
+            foreach (var item in list)
+            {
+                row = dataTable.NewRow();
+                row[0] = item.Id.ToString();
+                row[1] = item.createDate.ToString();
+                row[2] = String.Format("{0:0,00} VNĐ", item.totalMoney);
+                row[3] = item.status;
+                row[4] = item.Employe.fullName;
+
+                dataTable.Rows.Add(row);
+            }
+            return dataTable;
+        }
         
         public BillSell GetBillSellToDetailBill(DetailBillSell detailBillSell)
         {

@@ -73,6 +73,12 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FMessageOrderNumber.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserController\uc_EArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_EArea.Designer.cs">
+      <DependentUpon>uc_EArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserController\uc_AreaNormal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,11 +123,53 @@
     <Compile Include="UserController\uc_Dish.Designer.cs">
       <DependentUpon>uc_Dish.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserController\uc_EEmploye.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_EEmploye.Designer.cs">
+      <DependentUpon>uc_EEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_EProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_EProduct.Designer.cs">
+      <DependentUpon>uc_EProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_ESELL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_ESELL.Designer.cs">
+      <DependentUpon>uc_ESELL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_ESupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_ESupplier.Designer.cs">
+      <DependentUpon>uc_ESupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_ETable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_ETable.Designer.cs">
+      <DependentUpon>uc_ETable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserController\uc_KindProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserController\uc_KindProduct.Designer.cs">
       <DependentUpon>uc_KindProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_MArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_MArea.Designer.cs">
+      <DependentUpon>uc_MArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserController\uc_MSell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\uc_MSell.Designer.cs">
+      <DependentUpon>uc_MSell.cs</DependentUpon>
     </Compile>
     <Compile Include="UserController\uc_PanelOrderProducts.cs">
       <SubType>UserControl</SubType>
@@ -144,6 +198,9 @@
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMessageOrderNumber.resx">
       <DependentUpon>FMessageOrderNumber.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +221,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserController\uc_EArea.resx">
+      <DependentUpon>uc_EArea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserController\uc_AreaNormal.resx">
       <DependentUpon>uc_AreaNormal.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,8 +233,29 @@
     <EmbeddedResource Include="UserController\uc_Dish.resx">
       <DependentUpon>uc_Dish.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_EEmploye.resx">
+      <DependentUpon>uc_EEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_EProduct.resx">
+      <DependentUpon>uc_EProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_ESELL.resx">
+      <DependentUpon>uc_ESELL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_ESupplier.resx">
+      <DependentUpon>uc_ESupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_ETable.resx">
+      <DependentUpon>uc_ETable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserController\uc_KindProduct.resx">
       <DependentUpon>uc_KindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_MArea.resx">
+      <DependentUpon>uc_MArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\uc_MSell.resx">
+      <DependentUpon>uc_MSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserController\uc_PanelOrderProducts.resx">
       <DependentUpon>uc_PanelOrderProducts.cs</DependentUpon>
@@ -295,6 +376,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\checkmark_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_circle_60px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
