@@ -45,6 +45,8 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,9 +76,12 @@
     <Compile Include="Interfaces\IContextService.cs" />
     <Compile Include="Interfaces\ICustomerService.cs" />
     <Compile Include="Interfaces\IDetailBillSell.cs" />
+    <Compile Include="Interfaces\IOfficeService.cs" />
     <Compile Include="Interfaces\IProductService.cs" />
     <Compile Include="Interfaces\IProductTypeService.cs" />
+    <Compile Include="Interfaces\ISupplierService.cs" />
     <Compile Include="Interfaces\ITableService.cs" />
+    <Compile Include="Interfaces\IUnitService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Migrations\201912161544190_Initialize.cs" />
     <Compile Include="Migrations\201912161544190_Initialize.designer.cs">
@@ -101,12 +106,16 @@
     <Compile Include="Services\BillSellService.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\DetailBillSellService.cs" />
+    <Compile Include="Services\OfficeService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\ProductTypeService.cs" />
+    <Compile Include="Services\SupplierService.cs" />
     <Compile Include="Services\TableService.cs" />
+    <Compile Include="Services\UnitService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Utilities\GuidComb.cs" />
     <Compile Include="Utilities\GenerateHash.cs" />
+    <Compile Include="Utilities\saveImage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

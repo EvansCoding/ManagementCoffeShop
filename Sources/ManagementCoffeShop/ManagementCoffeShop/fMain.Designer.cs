@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.flpTop = new System.Windows.Forms.FlowLayoutPanel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTop.SuspendLayout();
             this.SuspendLayout();
@@ -43,12 +43,8 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(195, 736);
+            this.pnlTop.Size = new System.Drawing.Size(214, 736);
             this.pnlTop.TabIndex = 0;
-            // 
-            // defaultLookAndFeel1
-            // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2019 Colorful";
             // 
             // flpTop
             // 
@@ -56,16 +52,21 @@
             this.flpTop.BackColor = System.Drawing.Color.Silver;
             this.flpTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpTop.Location = new System.Drawing.Point(0, 0);
+            this.flpTop.Margin = new System.Windows.Forms.Padding(0);
             this.flpTop.Name = "flpTop";
-            this.flpTop.Size = new System.Drawing.Size(195, 736);
+            this.flpTop.Size = new System.Drawing.Size(214, 736);
             this.flpTop.TabIndex = 1;
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2019 Colorful";
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(195, 0);
+            this.panel1.Location = new System.Drawing.Point(214, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1169, 736);
+            this.panel1.Size = new System.Drawing.Size(1150, 736);
             this.panel1.TabIndex = 1;
             // 
             // fMain
@@ -76,7 +77,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTop);
             this.Name = "fMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMain";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fMain_FormClosed);
             this.Load += new System.EventHandler(this.fMain_Load);
             this.pnlTop.ResumeLayout(false);
             this.ResumeLayout(false);

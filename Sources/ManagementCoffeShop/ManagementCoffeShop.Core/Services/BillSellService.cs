@@ -49,7 +49,7 @@ namespace ManagementCoffeShop.Core.Services
 
         public BillSell GetBillSell(Tables tables)
         {
-            return _context.BillSells.Where(x => x.Table.Id == tables.Id).Include(x=>x.Table).Include(x => x.DetailBillSells).Include(x => x.Employe).SingleOrDefault();
+            return _context.BillSells.Where(x => x.Table.Id == tables.Id && x.status ==false).Include(x=>x.Table).Include(x => x.DetailBillSells).Include(x => x.Employe).OrderByDescending(x => x.createDate).Take(1).SingleOrDefault();
         }
 
         //public bool DeleteBill()

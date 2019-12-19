@@ -17,5 +17,11 @@ namespace ManagementCoffeShop.UserController
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            fMain f1 = Application.OpenForms.OfType<fMain>().FirstOrDefault();
+            f1.SellControlAdd(4);
+        }
     }
 }

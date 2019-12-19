@@ -555,7 +555,7 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="simpleButton2.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnPay.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 11.25pt, style=Bold</value>
   </data>
   <data name="btnPay.Location" type="System.Drawing.Point, System.Drawing">

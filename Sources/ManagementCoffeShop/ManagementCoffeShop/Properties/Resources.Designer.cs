@@ -73,6 +73,46 @@ namespace ManagementCoffeShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_forever_60px {
+            get {
+                object obj = ResourceManager.GetObject("delete_forever_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_forever_60px1 {
+            get {
+                object obj = ResourceManager.GetObject("delete_forever_60px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_48px {
+            get {
+                object obj = ResourceManager.GetObject("file_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_80px {
+            get {
+                object obj = ResourceManager.GetObject("file_80px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cafe_filled_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8_cafe_filled_16", resourceCulture);
@@ -326,6 +366,26 @@ namespace ManagementCoffeShop.Properties {
         internal static System.Drawing.Bitmap icons8_user_male_circle1_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_user_male_circle1_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap print_64px {
+            get {
+                object obj = ResourceManager.GetObject("print_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_64px {
+            get {
+                object obj = ResourceManager.GetObject("save_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,10 +1,7 @@
 ﻿using ManagementCoffeShop.Core.Interfaces;
 using ManagementCoffeShop.Core.Models.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementCoffeShop.Core.Services
 {
@@ -22,16 +19,21 @@ namespace ManagementCoffeShop.Core.Services
             var listProductType = _context.ProductTypes.Select(c => c).ToList();
             return listProductType;
         }
+
+        public List<string> GetAllName()
+        {
+            return _context.ProductTypes.Select(x => x.nameProductType).ToList();
+        }
+
+        public ProductType GetName(string name)
+        {
+            return _context.ProductTypes.Where(x => x.nameProductType == name).SingleOrDefault();
+        }
         /// <inheritdoc />
         public void RefreshContext(ICoffeShopContext context)
         {
             _context = context;
         }
 
-        /// <inheritdoc />
-        //public async Task<int> SaveChanges()
-        //{
-        //    return await _context.SaveChangesAsync();
-        //}
     }
 }

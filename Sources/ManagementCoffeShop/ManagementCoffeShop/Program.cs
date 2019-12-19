@@ -19,7 +19,7 @@ namespace ManagementCoffeShop
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new fMain());
+            Application.Run(new fLogin());
         }
     }
 }

@@ -45,6 +45,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Bàn";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 

@@ -49,7 +49,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1298, 146);
+            this.ribbonControl1.Size = new System.Drawing.Size(1298, 154);
             // 
             // ribbonPage1
             // 
@@ -65,7 +65,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2016 Colorful";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2019 Colorful";
             // 
             // button1
             // 

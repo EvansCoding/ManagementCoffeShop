@@ -187,5 +187,10 @@ namespace ManagementCoffeShop
             returnUC_PanelTables();
             flpOrdered.Controls.Clear();
         }
+
+        private void fORDER_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

@@ -38,20 +38,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbNamTable = new System.Windows.Forms.Label();
             this.btnNumberTable = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.lbNameEmploye = new System.Windows.Forms.Label();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.pnlControl = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.lbCount = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.lbNameEmploye = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPay = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lbTotal = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.btnPay = new DevExpress.XtraEditors.SimpleButton();
+            this.pnlControl = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
@@ -68,7 +68,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2016 Colorful";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2019 Colorful";
             // 
             // panelControl1
             // 
@@ -123,57 +123,6 @@
             this.btnNumberTable.Name = "btnNumberTable";
             this.btnNumberTable.UseVisualStyleBackColor = false;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnLogout);
-            this.panel6.Controls.Add(this.lbNameEmploye);
-            this.panel6.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
-            // 
-            // lbNameEmploye
-            // 
-            resources.ApplyResources(this.lbNameEmploye, "lbNameEmploye");
-            this.lbNameEmploye.ForeColor = System.Drawing.Color.White;
-            this.lbNameEmploye.Name = "lbNameEmploye";
-            // 
-            // panelControl4
-            // 
-            this.panelControl4.Controls.Add(this.panel2);
-            this.panelControl4.Controls.Add(this.panelControl6);
-            resources.ApplyResources(this.panelControl4, "panelControl4");
-            this.panelControl4.Name = "panelControl4";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lbTotal);
-            this.panel2.Controls.Add(this.label4);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // panelControl6
-            // 
-            this.panelControl6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(225)))));
-            this.panelControl6.Appearance.Options.UseBackColor = true;
-            this.panelControl6.Controls.Add(this.btnPay);
-            resources.ApplyResources(this.panelControl6, "panelControl6");
-            this.panelControl6.Name = "panelControl6";
-            // 
-            // pnlControl
-            // 
-            resources.ApplyResources(this.pnlControl, "pnlControl");
-            this.pnlControl.Name = "pnlControl";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
@@ -194,6 +143,14 @@
             this.lbCount.Name = "lbCount";
             this.lbCount.UseVisualStyleBackColor = false;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnLogout);
+            this.panel6.Controls.Add(this.lbNameEmploye);
+            this.panel6.Controls.Add(this.label1);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
             // btnLogout
             // 
             this.btnLogout.FlatAppearance.BorderSize = 0;
@@ -203,6 +160,12 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // lbNameEmploye
+            // 
+            resources.ApplyResources(this.lbNameEmploye, "lbNameEmploye");
+            this.lbNameEmploye.ForeColor = System.Drawing.Color.White;
+            this.lbNameEmploye.Name = "lbNameEmploye";
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
@@ -210,10 +173,42 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.panel2);
+            this.panelControl4.Controls.Add(this.panelControl6);
+            resources.ApplyResources(this.panelControl4, "panelControl4");
+            this.panelControl4.Name = "panelControl4";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbTotal);
+            this.panel2.Controls.Add(this.label4);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // lbTotal
+            // 
+            resources.ApplyResources(this.lbTotal, "lbTotal");
+            this.lbTotal.Name = "lbTotal";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(225)))));
+            this.panelControl6.Appearance.Options.UseBackColor = true;
+            this.panelControl6.Controls.Add(this.btnPay);
+            resources.ApplyResources(this.panelControl6, "panelControl6");
+            this.panelControl6.Name = "panelControl6";
+            // 
             // btnPay
             // 
             this.btnPay.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(159)))), ((int)(((byte)(86)))));
-            this.btnPay.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("simpleButton2.Appearance.Font")));
+            this.btnPay.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnPay.Appearance.Font")));
             this.btnPay.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btnPay.Appearance.Options.UseBackColor = true;
             this.btnPay.Appearance.Options.UseFont = true;
@@ -224,10 +219,15 @@
             this.btnPay.Name = "btnPay";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
-            // lbTotal
+            // pnlControl
             // 
-            resources.ApplyResources(this.lbTotal, "lbTotal");
-            this.lbTotal.Name = "lbTotal";
+            resources.ApplyResources(this.pnlControl, "pnlControl");
+            this.pnlControl.Name = "pnlControl";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // fORDER
             // 
@@ -249,6 +249,7 @@
             this.KeyPreview = true;
             this.Name = "fORDER";
             this.ShowMdiChildCaptionInParentTitle = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fORDER_FormClosed);
             this.Load += new System.EventHandler(this.fORDER_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.fORDER_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

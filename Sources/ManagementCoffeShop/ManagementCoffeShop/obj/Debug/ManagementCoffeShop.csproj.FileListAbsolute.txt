@@ -336,3 +336,15 @@ C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\Mana
 C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_ETable.resources
 C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_MSell.resources
 C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_MArea.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_MTables.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.fAddTable.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.fAddArea.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_MSupplier.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.fAddSupplier.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_MEmploye.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_EOffice.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_MOffice.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.fAddOffice.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.fAddUser.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.UserController.uc_MProduct.resources
+C:\Users\nguye\Desktop\Git2\ManagementCoffeShop\Sources\ManagementCoffeShop\ManagementCoffeShop\obj\Debug\ManagementCoffeShop.fAddProduct.resources

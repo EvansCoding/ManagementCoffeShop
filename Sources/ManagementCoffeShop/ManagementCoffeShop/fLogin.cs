@@ -4,6 +4,7 @@
     using System.Windows.Forms;
     using Core.Services;
     using Core.Data.Context;
+    using ManagementCoffeShop.Core.Constants;
 
     public partial class fLogin : DevExpress.XtraEditors.XtraForm
     {
@@ -19,6 +20,12 @@
             {
                 this.Hide();
                 var user = userService.GetUser(teLogin.Text);
+                if(user.userName == Constants.administrator)
+                {
+                    fMain fMain = new fMain();
+                    fMain.Show();
+                    return;
+                }
                 fORDER fORDER = new fORDER(user);
                 fORDER.Show();
             }
