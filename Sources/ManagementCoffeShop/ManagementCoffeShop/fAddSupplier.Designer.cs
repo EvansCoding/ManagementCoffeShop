@@ -34,21 +34,21 @@
             this.labelLogin = new DevExpress.XtraEditors.LabelControl();
             this.tbName = new DevExpress.XtraEditors.TextEdit();
             this.labelPassword = new DevExpress.XtraEditors.LabelControl();
+            this.tbAddress = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.tbPhone = new DevExpress.XtraEditors.TextEdit();
             this.buttonStackPanel = new DevExpress.Utils.Layout.StackPanel();
             this.btnLogIn = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.defaultLookAndFeel2 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.tbAddress = new DevExpress.XtraEditors.TextEdit();
-            this.tbPhone = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel)).BeginInit();
             this.stackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonStackPanel)).BeginInit();
-            this.buttonStackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonStackPanel)).BeginInit();
+            this.buttonStackPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // stackPanel
@@ -114,6 +114,38 @@
             this.labelPassword.TabIndex = 3;
             this.labelPassword.Text = "Địa Chỉ";
             // 
+            // tbAddress
+            // 
+            this.tbAddress.Location = new System.Drawing.Point(42, 110);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Properties.Appearance.FontSizeDelta = 4;
+            this.tbAddress.Properties.Appearance.Options.UseFont = true;
+            this.tbAddress.Size = new System.Drawing.Size(214, 26);
+            this.tbAddress.TabIndex = 12;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.FontSizeDelta = 2;
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.labelControl1.Location = new System.Drawing.Point(42, 146);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(214, 17);
+            this.labelControl1.TabIndex = 11;
+            this.labelControl1.Text = "Số Điện Thoại";
+            // 
+            // tbPhone
+            // 
+            this.tbPhone.Location = new System.Drawing.Point(42, 166);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Properties.Appearance.FontSizeDelta = 4;
+            this.tbPhone.Properties.Appearance.Options.UseFont = true;
+            this.tbPhone.Size = new System.Drawing.Size(214, 26);
+            this.tbPhone.TabIndex = 13;
+            // 
             // buttonStackPanel
             // 
             this.buttonStackPanel.Controls.Add(this.btnLogIn);
@@ -150,42 +182,6 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2019 Colorful";
             // 
-            // defaultLookAndFeel2
-            // 
-            this.defaultLookAndFeel2.LookAndFeel.SkinName = "Office 2019 Colorful";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.FontSizeDelta = 2;
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl1.Location = new System.Drawing.Point(42, 146);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(214, 17);
-            this.labelControl1.TabIndex = 11;
-            this.labelControl1.Text = "Số Điện Thoại";
-            // 
-            // tbAddress
-            // 
-            this.tbAddress.Location = new System.Drawing.Point(42, 110);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Properties.Appearance.FontSizeDelta = 4;
-            this.tbAddress.Properties.Appearance.Options.UseFont = true;
-            this.tbAddress.Size = new System.Drawing.Size(214, 26);
-            this.tbAddress.TabIndex = 12;
-            // 
-            // tbPhone
-            // 
-            this.tbPhone.Location = new System.Drawing.Point(42, 166);
-            this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Properties.Appearance.FontSizeDelta = 4;
-            this.tbPhone.Properties.Appearance.Options.UseFont = true;
-            this.tbPhone.Size = new System.Drawing.Size(214, 26);
-            this.tbPhone.TabIndex = 13;
-            // 
             // fAddSupplier
             // 
             this.AcceptButton = this.btnLogIn;
@@ -201,10 +197,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel)).EndInit();
             this.stackPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonStackPanel)).EndInit();
-            this.buttonStackPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonStackPanel)).EndInit();
+            this.buttonStackPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

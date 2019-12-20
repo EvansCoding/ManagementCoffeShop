@@ -108,20 +108,20 @@ namespace ManagementCoffeShop.UserController
         }
         private void deleteTable_Click(object sender, EventArgs e)
         {
-            checkOrderd = false;
-            if(_billSell != null)
-            {
-                DetailBillSellService detailBillSellService = new DetailBillSellService(new CoffeShopContext());
-                detailBillSellService.DeleteDetailBillSellAll(_billSell);
-                BillSellService bs= new BillSellService(new CoffeShopContext());
-                TableService tableService = new TableService(new CoffeShopContext());
+            //checkOrderd = false;
+            //if(_billSell != null)
+            //{
+            //    DetailBillSellService detailBillSellService = new DetailBillSellService(new CoffeShopContext());
+            //    detailBillSellService.DeleteDetailBillSellAll(_billSell);
+            //    BillSellService bs= new BillSellService(new CoffeShopContext());
+            //    TableService tableService = new TableService(new CoffeShopContext());
 
-                var tb = tableService.GetTables(_billSell);
-                tableService.SetStatusTable(tb, false);
-                bs.DeleteBillSell(_billSell);
+            //    var tb = tableService.GetTables(_billSell);
+            //    tableService.SetStatusTable(tb, false);
+            //    bs.DeleteBillSell(_billSell);
 
-                reloadProducts();
-            }
+            //    reloadProducts();
+            //}
 
         }
 

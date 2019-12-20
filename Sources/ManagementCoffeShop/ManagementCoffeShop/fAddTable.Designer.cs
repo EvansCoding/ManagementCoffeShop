@@ -156,6 +156,10 @@
             this.simpleButton1.Text = "Thoát";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
+            // defaultLookAndFeel2
+            // 
+            this.defaultLookAndFeel2.LookAndFeel.SkinName = "Office 2019 Colorful";
+            // 
             // fAddTable
             // 
             this.AcceptButton = this.btnLogIn;

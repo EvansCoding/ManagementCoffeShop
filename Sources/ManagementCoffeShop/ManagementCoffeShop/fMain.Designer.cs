@@ -76,11 +76,13 @@
             this.ClientSize = new System.Drawing.Size(1364, 736);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTop);
+            this.KeyPreview = true;
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fMain_FormClosed);
             this.Load += new System.EventHandler(this.fMain_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.fMain_KeyUp);
             this.pnlTop.ResumeLayout(false);
             this.ResumeLayout(false);
 

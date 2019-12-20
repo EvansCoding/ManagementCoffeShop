@@ -33,7 +33,6 @@
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.phoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,7 +41,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -126,18 +124,6 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackgroundImage = global::ManagementCoffeShop.Properties.Resources.print_64px;
-            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Location = new System.Drawing.Point(252, 0);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(60, 60);
-            this.btnReport.TabIndex = 3;
-            this.btnReport.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
@@ -245,19 +231,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhà cung cấp";
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(625, 6);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(2, 60);
-            this.panel6.TabIndex = 6;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Controls.Add(this.btnReport);
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Location = new System.Drawing.Point(383, 9);
@@ -268,7 +245,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 660);
@@ -303,7 +279,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnSave;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn phoneNumber;
@@ -312,7 +287,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
     }

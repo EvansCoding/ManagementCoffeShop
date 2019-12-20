@@ -38,7 +38,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -162,7 +161,6 @@
             // 
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Controls.Add(this.btnReport);
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Location = new System.Drawing.Point(416, 8);
@@ -191,18 +189,6 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackgroundImage = global::ManagementCoffeShop.Properties.Resources.print_64px;
-            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Location = new System.Drawing.Point(252, 0);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(60, 60);
-            this.btnReport.TabIndex = 3;
-            this.btnReport.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
@@ -294,7 +280,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel3;

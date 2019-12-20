@@ -195,6 +195,10 @@
             this.simpleButton2.Text = "Thêm";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2019 Colorful";
+            // 
             // stackPanel
             // 
             this.stackPanel.Appearance.BackColor = System.Drawing.Color.White;

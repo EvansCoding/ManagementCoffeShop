@@ -135,10 +135,56 @@ namespace ManagementCoffeShop.Core.Services
             _context = context;
         }
 
+        public decimal GetToTalAll(Guid IdBill)
+        {
+            var total = _context.BillSells.Where(x => x.Id == IdBill).Include(x => x.DetailBillSells).Select(x => x.DetailBillSells.Sum(c => c.Total));
+            return Convert.ToDecimal(total);
+        }
         /// <inheritdoc />
         //public async Task<int> SaveChanges()
         //{
         //    return await _context.SaveChangesAsync();
         //}
+
+        public DataTable GetBillTime(DateTime date)
+        {
+
+          var  list = _context.BillSells.Where(x => x.createDate.Month == date.Month && x.createDate.Year == date.Year).Include(x => x.Employe).ToList();
+            DataTable dataTable = new DataTable();
+            dataTable.Clear();
+            dataTable.Columns.Add("Id", typeof(string));
+            dataTable.Columns.Add("createDate", typeof(string));
+            dataTable.Columns.Add("totalMoney", typeof(string));
+            dataTable.Columns.Add("status", typeof(string));
+            dataTable.Columns.Add("fullName", typeof(string));
+            DataRow row;
+            foreach (var item in list)
+            {
+                row = dataTable.NewRow();
+                row[0] = item.Id.ToString();
+                row[1] = item.createDate.ToString();
+                row[2] = String.Format("{0:0,00} VNĐ", item.totalMoney);
+                row[3] = item.status;
+                row[4] = item.Employe.fullName;
+
+                dataTable.Rows.Add(row);
+            }
+            return dataTable;
+        }
+
+        public decimal GetToTalTime(DateTime date)
+        {
+            try
+            {
+                decimal list = _context.BillSells.Where(x => x.createDate.Month == date.Month && x.createDate.Year == date.Year).Include(x => x.Employe).Sum(x => x.totalMoney);
+
+                return list;
+            }
+            catch (Exception)
+            {
+            }
+            return 0;
+        }
+
     }
 }

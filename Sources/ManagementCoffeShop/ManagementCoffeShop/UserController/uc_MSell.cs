@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ManagementCoffeShop.Core.Services;
 using ManagementCoffeShop.Core.Data.Context;
+using ManagementCoffeShop.Report;
+using DevExpress.XtraReports.UI;
 
 namespace ManagementCoffeShop.UserController
 {
@@ -24,6 +26,14 @@ namespace ManagementCoffeShop.UserController
         {
             BillSellService billSellService = new BillSellService(new CoffeShopContext());
             gridControl1.DataSource = billSellService.GetAllBill();
+        }
+
+
+
+        private void dateEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            BillSellService billSellService = new BillSellService(new CoffeShopContext());
+            gridControl1.DataSource = billSellService.GetBillTime(dateEdit1.DateTime);
         }
     }
 }

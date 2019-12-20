@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmtDISH = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.orderProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteTable = new System.Windows.Forms.ToolStripMenuItem();
             this.cmtDISH.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,10 +64,9 @@
             // cmtDISH
             // 
             this.cmtDISH.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.orderProduct,
-            this.deleteTable});
+            this.orderProduct});
             this.cmtDISH.Name = "cmtDISH";
-            this.cmtDISH.Size = new System.Drawing.Size(181, 70);
+            this.cmtDISH.Size = new System.Drawing.Size(181, 48);
             // 
             // orderProduct
             // 
@@ -77,14 +75,6 @@
             this.orderProduct.Size = new System.Drawing.Size(180, 22);
             this.orderProduct.Text = "Gọi Món";
             this.orderProduct.Click += new System.EventHandler(this.orderProduct_Click);
-            // 
-            // deleteTable
-            // 
-            this.deleteTable.Image = global::ManagementCoffeShop.Properties.Resources.icons8_delete_property_32;
-            this.deleteTable.Name = "deleteTable";
-            this.deleteTable.Size = new System.Drawing.Size(180, 22);
-            this.deleteTable.Text = "Hủy Bàn";
-            this.deleteTable.Click += new System.EventHandler(this.deleteTable_Click);
             // 
             // uc_Table
             // 
@@ -108,6 +98,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip cmtDISH;
         private System.Windows.Forms.ToolStripMenuItem orderProduct;
-        private System.Windows.Forms.ToolStripMenuItem deleteTable;
     }
 }

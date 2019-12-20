@@ -176,5 +176,10 @@ namespace ManagementCoffeShop.Core.Services
             return false;
         }
 
+        public Product GetProductWithID(Guid ID)
+        {
+            return _context.Products.Where(x => x.Id == ID).Include(x => x.Unit).Include(x => x.ProductType).SingleOrDefault();
+        }
+
     }
 }

@@ -22,7 +22,7 @@
                 var user = userService.GetUser(teLogin.Text);
                 if(user.userName == Constants.administrator)
                 {
-                    fMain fMain = new fMain();
+                    fMain fMain = new fMain(user);
                     fMain.Show();
                     return;
                 }

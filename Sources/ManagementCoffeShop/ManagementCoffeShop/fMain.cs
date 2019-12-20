@@ -1,4 +1,5 @@
 ﻿using ManagementCoffeShop.Classes;
+using ManagementCoffeShop.Core.Models.Entities;
 using ManagementCoffeShop.UserController;
 using System;
 using System.Windows.Forms;
@@ -13,14 +14,15 @@ namespace ManagementCoffeShop
         {
             get
             {
-                if (instance == null) return instance = new fMain();
+                if (instance == null) return instance = new fMain(employe);
                 return instance;
             }
         }
-
-        public fMain()
+        public static Employe employe;
+        public fMain(Employe empl)
         {
             InitializeComponent();
+            employe = empl;
         }
 
         private void fMain_Load(object sender, EventArgs e)
@@ -93,6 +95,26 @@ namespace ManagementCoffeShop
         private void fMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Restart();
+        }
+
+        bool check = true;
+        private void fMain_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F11 && check)
+            {
+                FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                WindowState = FormWindowState.Maximized;
+                check = false;
+            }
+            else
+            {
+                if (e.KeyCode == Keys.F11 && !check)
+                {
+                    FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+                    WindowState = FormWindowState.Normal;
+                    check = true;
+                }
+            }
         }
     }
 }

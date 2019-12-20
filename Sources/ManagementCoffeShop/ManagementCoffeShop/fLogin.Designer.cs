@@ -32,6 +32,7 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.stackPanel = new DevExpress.Utils.Layout.StackPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.labelCaption = new DevExpress.XtraEditors.LabelControl();
             this.labelLogin = new DevExpress.XtraEditors.LabelControl();
             this.teLogin = new DevExpress.XtraEditors.TextEdit();
@@ -39,7 +40,6 @@
             this.tePassword = new DevExpress.XtraEditors.TextEdit();
             this.buttonStackPanel = new DevExpress.Utils.Layout.StackPanel();
             this.btnLogIn = new DevExpress.XtraEditors.SimpleButton();
-            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel)).BeginInit();
             this.stackPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,6 +77,20 @@
             this.panel1.Size = new System.Drawing.Size(358, 25);
             this.panel1.TabIndex = 8;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = global::ManagementCoffeShop.Properties.Resources.icons8_delete_sign;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(333, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(23, 23);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // labelCaption
             // 
             this.labelCaption.Appearance.FontSizeDelta = 8;
@@ -102,7 +116,7 @@
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(214, 17);
             this.labelLogin.TabIndex = 1;
-            this.labelLogin.Text = "Tên tài khoảng";
+            this.labelLogin.Text = "Tên tài khoản";
             // 
             // teLogin
             // 
@@ -156,20 +170,6 @@
             this.btnLogIn.TabIndex = 1;
             this.btnLogIn.Text = "Đăng Nhập";
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackgroundImage = global::ManagementCoffeShop.Properties.Resources.icons8_delete_sign;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(333, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(23, 23);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // fLogin
             // 

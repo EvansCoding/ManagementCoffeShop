@@ -15,6 +15,8 @@ using ManagementCoffeShop.Core.Models.Entities;
 using ManagementCoffeShop.Core.Constants;
 using ManagementCoffeShop.Core.Services;
 using ManagementCoffeShop.Core.Data.Context;
+using ManagementCoffeShop.Report;
+using DevExpress.XtraReports.UI;
 
 namespace ManagementCoffeShop
 {
@@ -186,11 +188,22 @@ namespace ManagementCoffeShop
             tableService.SetStatusTable(staticTable,false );
             returnUC_PanelTables();
             flpOrdered.Controls.Clear();
+            printBill(staticBill);
         }
 
+        private void printBill(BillSell billSell)
+        {
+            DetailBillSellService detailBillSellService = new DetailBillSellService(new CoffeShopContext());
+            var a = detailBillSellService.dataProduct(billSell.Id.ToString());
+            //BillSellService billSellService = new BillSellService(new CoffeShopContext());
+            var b = detailBillSellService.GetTolTalDetail(billSell.Id);
+            lbTotalAll xtraReport1 = new lbTotalAll();
+            xtraReport1.load(a, billSell.Employe.fullName, b);
+            xtraReport1.ShowPreviewDialog();
+        }
         private void fORDER_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Restart();
+           // Application.Restart();
         }
     }
 }
