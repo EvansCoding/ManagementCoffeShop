@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ManagementCoffeShop.Core.Models.Entities;
+using System;
 using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using ManagementCoffeShop.Core.Models.Entities;
 
 namespace ManagementCoffeShop.UserController
 {
@@ -29,7 +22,7 @@ namespace ManagementCoffeShop.UserController
         {
             Image image = Image.FromFile(Application.StartupPath + "\\Images\\" + product.pathImage + ".png");
 
-            btnImage.BackgroundImage = image;;
+            btnImage.BackgroundImage = image; ;
             decimal price = product.priceProduct / (decimal)1000.0;
             lbPrice.Text = price.ToString(".") + " K";
             lbName.Text = product.nameProduct.ToString();

@@ -54,7 +54,7 @@ namespace ManagementCoffeShop.Core.Services
             return listDetail;
         }
 
-        public int  GetCountDetail(BillSell billSell)
+        public int GetCountDetail(BillSell billSell)
         {
             return _context.DetailBillSells.Where(x => x.BillSells.Any(r => r.Id == billSell.Id)).Include(x => x.Product).Include(x => x.BillSells).ToList().Sum(x => x.Quantum);
         }
@@ -74,7 +74,7 @@ namespace ManagementCoffeShop.Core.Services
         {
             return _context.DetailBillSells.Where(x => x.Id == detailBillSell.Id).Include(x => x.BillSells).Include(x => x.Product).SingleOrDefault();
         }
-        
+
         public void RefreshContext(ICoffeShopContext context)
         {
             _context = context;
@@ -97,7 +97,6 @@ namespace ManagementCoffeShop.Core.Services
             foreach (Guid item in list.DetailBillSells.Select(x => x.Id).ToList())
             {
                 var detail = GetDetailBillWithID(item);
-               // var prod = productService.GetProductWithID(item.Product.Id);
                 row = dataTable.NewRow();
                 row[0] = detail.Product.nameProduct;
                 row[1] = detail.Product.priceProduct.ToString("N0");

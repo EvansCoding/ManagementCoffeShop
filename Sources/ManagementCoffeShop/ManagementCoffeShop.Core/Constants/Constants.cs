@@ -2,6 +2,8 @@
 {
     public static class Constants
     {
+
+
         public const string Manager = "QUẢN LÝ";
         public const string Employees = "NHÂN VIÊN";
 

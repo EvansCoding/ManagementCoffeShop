@@ -16,10 +16,17 @@
     {
         public CoffeShopContext()
         {
-            Configuration.LazyLoadingEnabled = true;
-            Configuration.ProxyCreationEnabled = false;
-            (this as IObjectContextAdapter).ObjectContext.ContextOptions.UseCSharpNullComparisonBehavior = true;
-            this.Database.Connection.StateChange += Connection_StateChange;
+            try
+            {
+                Configuration.LazyLoadingEnabled = true;
+                Configuration.ProxyCreationEnabled = false;
+                (this as IObjectContextAdapter).ObjectContext.ContextOptions.UseCSharpNullComparisonBehavior = true;
+                this.Database.Connection.StateChange += Connection_StateChange;
+            }
+            catch (Exception)
+            {
+            }
+
         }
         void Connection_StateChange(object sender, System.Data.StateChangeEventArgs e)
         {

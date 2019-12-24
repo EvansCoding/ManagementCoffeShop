@@ -137,13 +137,6 @@ namespace ManagementCoffeShop
         {
             flpOrdered.Controls.RemoveByKey(billSell.Id.ToString());
             flpOrdered.Refresh();
-            //DetailBillSellService detailBillSellService = new DetailBillSellService(new CoffeShopContext());
-
-            //foreach (var item in detailBillSellService.GetDetailBillSell(billSell))
-            //{
-            //    uc_Dish uc_Dish = new uc_Dish(item);
-            //    flpOrdered.Controls.Add(uc_Dish);
-            //}
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -175,9 +168,7 @@ namespace ManagementCoffeShop
 
                 bsService.SetTotal(detail, billSell);
                 f1.lbTotal.Text = String.Format("{0:0,00} VNĐ", bsService.GetTotal(billSell));
-
             }
-
         }
 
         private void btnPay_Click(object sender, EventArgs e)
@@ -203,7 +194,6 @@ namespace ManagementCoffeShop
         }
         private void fORDER_FormClosed(object sender, FormClosedEventArgs e)
         {
-           // Application.Restart();
         }
     }
 }

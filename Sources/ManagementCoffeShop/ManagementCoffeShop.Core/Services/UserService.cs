@@ -3,13 +3,11 @@
     using Interfaces;
     using Models.Entities;
     using Models.Enum;
-    using Utilities;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using System.Data.Entity;
-    using System.Collections.Generic;
-    using System.Data;
     using System;
+    using System.Data;
+    using System.Data.Entity;
+    using System.Linq;
+    using Utilities;
 
     public class UserService : IUserService
     {
@@ -29,14 +27,14 @@
             var user = GetUser(userName);
             if (user == null)
             {
-              LastLoginStatus = LoginAttemptStatus.UserNotFound;
+                LastLoginStatus = LoginAttemptStatus.UserNotFound;
                 return false;
             }
 
             var hash = GenerateHash.Instance.ComputeSha256Hash(password);
             var passwordMatches = hash == user.password;
-            
-            if(!passwordMatches)
+
+            if (!passwordMatches)
             {
                 LastLoginStatus = LoginAttemptStatus.PasswordIncorrect;
                 return false;
@@ -45,7 +43,7 @@
             return LastLoginStatus == LoginAttemptStatus.LoginSuccessful;
         }
 
-        
+
         public Employe GetUser(string userName)
         {
             var user = _context.Employes.FirstOrDefault(x => x.userName == userName);
@@ -65,7 +63,7 @@
 
         public DataTable GetAll()
         {
-            var list =  _context.Employes.Include(x => x.Offices).Select(x => x).ToList();
+            var list = _context.Employes.Include(x => x.Offices).Select(x => x).ToList();
 
             DataTable dataTable = new DataTable();
             dataTable.Clear();
@@ -162,7 +160,7 @@
                 }
                 return true;
             }
-           catch (Exception)
+            catch (Exception)
             {
             }
             return false;
@@ -186,7 +184,7 @@
             return false;
         }
 
-        public bool Insert(string userName, string password, string fullName, string sex, string birthDay, string  address, string phone, string email, string nameOff)
+        public bool Insert(string userName, string password, string fullName, string sex, string birthDay, string address, string phone, string email, string nameOff)
         {
             try
             {
@@ -204,7 +202,7 @@
                     password = GenerateHash.Instance.ComputeSha256Hash(password),
                     fullName = fullName,
                     sex = sex == "nam" ? true : false,
-                    birthDay = Convert.ToDateTime( birthDay),
+                    birthDay = Convert.ToDateTime(birthDay),
                     address = address,
                     phoneNumber = phone,
                     email = email,

@@ -81,21 +81,11 @@ namespace ManagementCoffeShop.Core.Services
             }
             return false;
         }
-        //public Area GetAreaWith(Tables tables)
-        //{
-        //    //var area = _context.Areas.FirstOrDefault(x => x.Tables. == tables);
-        //    //return area;
-        //}
-        /// <inheritdoc />
+
         public void RefreshContext(ICoffeShopContext context)
         {
             _context = context;
         }
 
-        /// <inheritdoc />
-        //public async Task<int> SaveChanges()
-        //{
-        //    return await _context.SaveChangesAsync();
-        //}
     }
 }

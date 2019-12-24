@@ -16,6 +16,18 @@
             _context = context;
         }
 
+        public Tables GetTable(string idTable)
+        {
+            try
+            {
+                return _context.Tables.Where(x => x.Id == new Guid(idTable)).SingleOrDefault();
+            }
+            catch (Exception)
+            {
+            }
+            return null;
+        }
+
         public List<Tables> GetTables(Area area)
         {
             var listTableNOR = _context.Tables.Where(x => x.Area.Id == area.Id).Include(t => t.BillSells).ToList();

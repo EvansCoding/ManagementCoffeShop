@@ -48,9 +48,9 @@ namespace ManagementCoffeShop.UserController
             var employe = fORDER.Instance.GetEmploye();
             uc_Table uS_ShortInfo = new uc_Table(employe, table, i);
             //flpAreaVIP.BeginInvoke((Action)(() =>
-        //    {
-                flpAreaVIP.Controls.Add(uS_ShortInfo);
-          //  }));
+            //    {
+            flpAreaVIP.Controls.Add(uS_ShortInfo);
+            //  }));
         }
 
         private void uc_AreaVIP_Load(object sender, EventArgs e)

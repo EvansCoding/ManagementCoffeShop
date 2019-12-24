@@ -3,8 +3,6 @@ using ManagementCoffeShop.Core.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementCoffeShop.Core.Services
 {
@@ -21,10 +19,7 @@ namespace ManagementCoffeShop.Core.Services
             return _context.Offices.Select(x => x).ToList();
         }
 
-        //public List<string> GetAllNameString()
-        //{
-        //    return _context.Offices.Select(x => x.nameOffice).ToList();
-        //}
+
 
         public bool Insert(string name)
         {

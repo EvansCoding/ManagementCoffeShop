@@ -10,7 +10,6 @@ namespace ManagementCoffeShop.UserController
 {
     public partial class uc_Table : DevExpress.XtraEditors.XtraUserControl
     {
-
         public uc_Table(Employe _employe, Tables _table, int i)
         {
             InitializeComponent();
@@ -26,15 +25,20 @@ namespace ManagementCoffeShop.UserController
 
         private void uc_Table_Load(object sender, EventArgs e)
         {
-            BillSellService billSellService = new BillSellService(new CoffeShopContext());
-            label1.Text = index.ToString();
-            if (table.status)
+            try
             {
-                label1.BackColor = Color.Yellow;
-                Name = billSellService.GetBillSell(table).Id.ToString();
-                _billSell = billSellService.GetBillSell(table);
+                BillSellService billSellService = new BillSellService(new CoffeShopContext());
+                label1.Text = index.ToString();
+                if (table.status)
+                {
+                    label1.BackColor = Color.Yellow;
+                    Name = billSellService.GetBillSell(table).Id.ToString();
+                    _billSell = billSellService.GetBillSell(table);
+                }
             }
-
+            catch (Exception)
+            {
+            }
         }
 
         private void uc_Table_Click(object sender, EventArgs e)
@@ -44,22 +48,27 @@ namespace ManagementCoffeShop.UserController
         private void label1_Click(object sender, EventArgs e)
         {
             fORDER.checkStatus = true;
+
             fORDER.staticTable = table;
+            if(_billSell != null)
+            {
+                fORDER.staticBill = _billSell;
+            }
             fORDER f1 = Application.OpenForms.OfType<fORDER>().FirstOrDefault();
 
-            if (f1 != null)
-            {
-                f1.showTableInMenu(table, index);
-                if (_billSell != null)
+                if (f1 != null)
                 {
-                    BillSellService billSellService = new BillSellService(new CoffeShopContext());
-                    DetailBillSellService detailBillSellService = new DetailBillSellService(new CoffeShopContext());
-                    var listDetail = detailBillSellService.GetDetailBillSell(_billSell);
-                    f1.showListProductOrder(listDetail);
+                    f1.showTableInMenu(table, index);
+                    if (_billSell != null)
+                    {
+                        BillSellService billSellService = new BillSellService(new CoffeShopContext());
+                        DetailBillSellService detailBillSellService = new DetailBillSellService(new CoffeShopContext());
+                        var listDetail = detailBillSellService.GetDetailBillSell(_billSell);
+                        f1.showListProductOrder(listDetail);
+                    }
+                    else f1.flpOrdered.Controls.Clear();
                 }
-                else f1.flpOrdered.Controls.Clear();
-            }
-            loadInfoOrder(_billSell);
+                loadInfoOrder(_billSell);
         }
         bool checkOrderd = true;
         private void orderProduct_Click(object sender, EventArgs e)
@@ -103,26 +112,10 @@ namespace ManagementCoffeShop.UserController
                     uc_AreaNormal.Instance.preLoad();
                     uc_AreaVIP.Instance.preLoad();
                 }
-
             }
         }
         private void deleteTable_Click(object sender, EventArgs e)
         {
-            //checkOrderd = false;
-            //if(_billSell != null)
-            //{
-            //    DetailBillSellService detailBillSellService = new DetailBillSellService(new CoffeShopContext());
-            //    detailBillSellService.DeleteDetailBillSellAll(_billSell);
-            //    BillSellService bs= new BillSellService(new CoffeShopContext());
-            //    TableService tableService = new TableService(new CoffeShopContext());
-
-            //    var tb = tableService.GetTables(_billSell);
-            //    tableService.SetStatusTable(tb, false);
-            //    bs.DeleteBillSell(_billSell);
-
-            //    reloadProducts();
-            //}
-
         }
 
         private void loadInfoOrder(BillSell billSell)
@@ -149,9 +142,7 @@ namespace ManagementCoffeShop.UserController
                     
                 bsService.SetTotal(detail, billSell);
                 f1.lbTotal.Text = String.Format("{0:0,00} VNĐ", bsService.GetTotal(billSell));
-
             }
-
         }
     }
 }

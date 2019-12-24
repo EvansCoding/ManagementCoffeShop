@@ -1,19 +1,35 @@
 ﻿namespace ManagementCoffeShop.Core.Migrations
 {
+    using ManagementCoffeShop.Core.Data.Context;
     using ManagementCoffeShop.Core.Models.Entities;
     using ManagementCoffeShop.Core.Utilities;
     using System;
     using System.Collections.Generic;
     using System.Configuration;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ManagementCoffeShop.Core.Data.Context.CoffeShopContext>
     {
+        private readonly bool _pendingMigrations;
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
+
+            // Check if there are migrations pending to run, this can happen if database doesn't exists or if there was any
+            //  change in the schema
+            var migrator = new DbMigrator(this);
+            _pendingMigrations = migrator.GetPendingMigrations().Any();
+
+            // If there are pending migrations run migrator.Update() to create/update the database then run the Seed() method to populate
+            //  the data if necessary
+           // if (_pendingMigrations)
+            {
+                migrator.Update();
+                Seed(new CoffeShopContext());
+            }
         }
 
         protected override void Seed(ManagementCoffeShop.Core.Data.Context.CoffeShopContext context)
@@ -63,6 +79,33 @@
                     context.SaveChanges();
                 }
 
+                // If the employe user exists then don't do anything else
+                const string passEmp = "123";
+                if (context.Employes.FirstOrDefault(x => x.userName == Constants.Constants.Employees) == null)
+                {
+                    var employe = new Employe
+                    {
+                        userName = "kiet",
+                        password = GenerateHash.Instance.ComputeSha256Hash(passEmp),
+                        fullName = "Nguyễn Tuấn Kiệt",
+                        sex = true,
+                        birthDay = new DateTime(1999, 08, 22),
+                        address = "CaoLanh City",
+                        phoneNumber = "0836980284",
+                        email = "nguyen.ntkiet1999@gmail.com",
+                        dayAtWork = DateTime.Now,
+                        statusOfWork = true,
+                        createDate = DateTime.Now,
+                        updateDate = DateTime.Now
+                    };
+                    var theEmploye = context.Offices.FirstOrDefault(x => x.nameOffice == Constants.Constants.Employees);
+                    if (theEmploye != null)
+                    {
+                        employe.Offices = theEmploye;
+                        context.Employes.Add(employe);
+                        context.SaveChanges();
+                    }
+                }
                 // Insert info for Talbe Unit
                 var aGlass = context.Units.FirstOrDefault(x => x.nameUnit == Constants.Constants.glass);
                 if (aGlass == null)

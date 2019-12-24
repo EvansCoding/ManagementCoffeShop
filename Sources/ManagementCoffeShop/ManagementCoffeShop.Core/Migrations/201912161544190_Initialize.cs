@@ -2,9 +2,31 @@
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+    using System.Data.SqlClient;
+
     public partial class Initialize : DbMigration
     {
+        //private bool TableExists(string table)
+        //{
+        //    const string command = "select * from sys.tables";
+        //    using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings[ForumConfiguration.Instance.MvcForumContext].ConnectionString))
+        //    using (var com = new SqlCommand(command, con))
+        //    {
+        //        con.Open();
+        //        var reader = com.ExecuteReader();
+        //        while (reader.Read())
+        //        {
+        //            if (string.Equals(reader.GetString(0), table, StringComparison.CurrentCultureIgnoreCase))
+        //            {
+        //                return true;
+        //            }
+        //        }
+        //        reader.Close();
+        //        con.Close();
+        //    }
+        //    return false;
+        //}
+
         public override void Up()
         {
             CreateTable(

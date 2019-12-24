@@ -3,8 +3,6 @@ using ManagementCoffeShop.Core.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementCoffeShop.Core.Services
 {
@@ -63,7 +61,6 @@ namespace ManagementCoffeShop.Core.Services
         {
             try
             {
-
                 Supplier sup = new Supplier
                 {
                     nameSupplier = name,

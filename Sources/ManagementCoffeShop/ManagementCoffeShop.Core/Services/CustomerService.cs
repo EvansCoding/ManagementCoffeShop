@@ -25,10 +25,5 @@ namespace ManagementCoffeShop.Core.Services
             _context = context;
         }
 
-        /// <inheritdoc />
-        //public async Task<int> SaveChanges()
-        //{
-        //    return await _context.SaveChanges();
-        //}
     }
 }

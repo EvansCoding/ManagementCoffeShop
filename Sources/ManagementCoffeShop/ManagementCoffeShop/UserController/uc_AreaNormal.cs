@@ -49,10 +49,10 @@ namespace ManagementCoffeShop.UserController
         {
             var employe = fORDER.Instance.GetEmploye();
             uc_Table uS_ShortInfo = new uc_Table(employe, table, i);
-          //  flpAreaNormal.BeginInvoke((Action)(() =>
-         //   {
-                flpAreaNormal.Controls.Add(uS_ShortInfo);
-          //  }));
+            //  flpAreaNormal.BeginInvoke((Action)(() =>
+            //   {
+            flpAreaNormal.Controls.Add(uS_ShortInfo);
+            //  }));
         }
 
         private void uc_AreaNormal_Load(object sender, EventArgs e)

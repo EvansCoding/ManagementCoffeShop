@@ -2,10 +2,9 @@
 using ManagementCoffeShop.Core.Models.Entities;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Linq;
-using System.Data.Entity;
 using System.Data;
+using System.Data.Entity;
+using System.Linq;
 
 namespace ManagementCoffeShop.Core.Services
 {
@@ -32,7 +31,7 @@ namespace ManagementCoffeShop.Core.Services
                     status = false,
                 };
                 UserService userService = new UserService(_context);
-                billSell.Employe =userService.GetUser(employe);
+                billSell.Employe = userService.GetUser(employe);
                 TableService tableService = new TableService(_context);
                 billSell.Table = tableService.GetTables(table);
                 _context.Entry(billSell);
@@ -49,14 +48,14 @@ namespace ManagementCoffeShop.Core.Services
 
         public BillSell GetBillSell(Tables tables)
         {
-            return _context.BillSells.Where(x => x.Table.Id == tables.Id && x.status ==false).Include(x=>x.Table).Include(x => x.DetailBillSells).Include(x => x.Employe).OrderByDescending(x => x.createDate).Take(1).SingleOrDefault();
+            return _context.BillSells.Where(x => x.Table.Id == tables.Id && x.status == false).Include(x => x.Table).Include(x => x.DetailBillSells).Include(x => x.Employe).OrderByDescending(x => x.createDate).Take(1).SingleOrDefault();
         }
 
         //public bool DeleteBill()
         public bool DeleteBillSell(BillSell billSell)
         {
             var bil = _context.BillSells.FirstOrDefault(x => x.Id == billSell.Id);
-            if(bil != null)
+            if (bil != null)
             {
                 _context.BillSells.Remove(bil);
 
@@ -68,7 +67,7 @@ namespace ManagementCoffeShop.Core.Services
 
         public DataTable GetAllBill()
         {
-            var list =  _context.BillSells.Include(x => x.Employe).Select(x => x).ToList();
+            var list = _context.BillSells.Include(x => x.Employe).Select(x => x).ToList();
             DataTable dataTable = new DataTable();
             dataTable.Clear();
             dataTable.Columns.Add("Id", typeof(string));
@@ -90,7 +89,7 @@ namespace ManagementCoffeShop.Core.Services
             }
             return dataTable;
         }
-        
+
         public BillSell GetBillSellToDetailBill(DetailBillSell detailBillSell)
         {
             return _context.BillSells.FirstOrDefault(x => x.DetailBillSells == detailBillSell);
@@ -100,7 +99,7 @@ namespace ManagementCoffeShop.Core.Services
         {
             return _context.BillSells.Where(x => x.Id == Id).Include(x => x.Table).SingleOrDefault();
         }
-        
+
         public bool SetTotal(List<DetailBillSell> detailBillSells, BillSell billSell)
         {
             decimal total = 0;
@@ -121,7 +120,7 @@ namespace ManagementCoffeShop.Core.Services
             return bill.totalMoney;
         }
 
-        public bool setStatus(bool status,BillSell billSell)
+        public bool setStatus(bool status, BillSell billSell)
         {
             var bill = _context.BillSells.Where(x => x.Id == billSell.Id).Include(x => x.Employe).Include(x => x.DetailBillSells).Include(x => x.Table).SingleOrDefault();
 
@@ -140,16 +139,12 @@ namespace ManagementCoffeShop.Core.Services
             var total = _context.BillSells.Where(x => x.Id == IdBill).Include(x => x.DetailBillSells).Select(x => x.DetailBillSells.Sum(c => c.Total));
             return Convert.ToDecimal(total);
         }
-        /// <inheritdoc />
-        //public async Task<int> SaveChanges()
-        //{
-        //    return await _context.SaveChangesAsync();
-        //}
+
 
         public DataTable GetBillTime(DateTime date)
         {
 
-          var  list = _context.BillSells.Where(x => x.createDate.Month == date.Month && x.createDate.Year == date.Year).Include(x => x.Employe).ToList();
+            var list = _context.BillSells.Where(x => x.createDate.Month == date.Month && x.createDate.Year == date.Year).Include(x => x.Employe).ToList();
             DataTable dataTable = new DataTable();
             dataTable.Clear();
             dataTable.Columns.Add("Id", typeof(string));

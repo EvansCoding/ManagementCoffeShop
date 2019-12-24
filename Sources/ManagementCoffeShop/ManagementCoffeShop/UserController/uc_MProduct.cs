@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using ManagementCoffeShop.Core.Services;
-using ManagementCoffeShop.Core.Data.Context;
-using DevExpress.XtraEditors.Repository;
+﻿using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Grid;
+using ManagementCoffeShop.Core.Data.Context;
+using ManagementCoffeShop.Core.Services;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace ManagementCoffeShop.UserController
 {
@@ -34,7 +27,7 @@ namespace ManagementCoffeShop.UserController
             UnitService unitService = new UnitService(new CoffeShopContext());
             ProductService productService = new ProductService(new CoffeShopContext());
             gridControl1.DataSource = productService.GetAllProduct();
-           // AreaService areaService = new AreaService(new CoffeShopContext());
+            // AreaService areaService = new AreaService(new CoffeShopContext());
 
             RepositoryItemComboBox productType = new RepositoryItemComboBox();
 
